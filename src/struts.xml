@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+	<struts> 
+	    <package name="default" extends="struts-default"> 
+	<result-types>
+		<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+	</result-types>
+	<!-- Home page -->
+		<action name="home" class="mypack.SelectAction">
+         	<result name="success" type="tiles">/home.tiles</result>
+		</action>
+	<!-- Login Page -->
+	    <action name="my" class="mypack.MyAction"> 
+	            <result type="tiles">/login.tiles</result> 
+	    </action>
+	    
+	        <action name="go" class="mypack.LoginAction"> 
+	            <result type="chain">SelectAction</result>  
+				<result name="error" type="tiles">/login.tiles</result>      
+	        </action>
+	<!-- Selection Page -->    
+	        <action name="SelectAction" class="mypack.SelectAction">
+				<result type="tiles">/select.tiles</result>
+			</action>
+			<action name="SegeAction" class="mypack.SelectAction">
+				<result>/select2.jsp</result>
+			</action> 
+	<!--Feedback  -->	
+			<action name="Feed" class="mypack.FeedAction"> 
+	            <result type="tiles">/feed.tiles</result>
+	            </action>
+	<!--About us  -->	
+	         <action name="AboutUsPage" class="mypack.MyAction"> 
+	            <result type="tiles">/about.tiles</result>
+	         </action> 
+	<!--Contact us  -->	
+	         <action name="ContactUs" class="mypack.MyAction"> 
+	            <result type="tiles">/contact.tiles</result>
+	         </action>	
+	<!-- Default Config -->	
+			<action name="DefaultConfig" class="mypack.DefConfigAction">
+				 <result type="tiles">/default.tiles</result> 
+				<!-- <result>/final.jsp</result> -->
+			</action>     
+	          
+	<!-- Registration Page -->
+		    <action name="reger" class="mypack.MyAction">
+	       		 <result type="tiles">/reg.tiles</result>
+	        </action>
+			<action name="goRegister" class="mypack.RegistrationAction">
+	        	<result type="tiles">/login.tiles</result>
+	        <result name="fail">/Fail.jsp</result>
+	        </action>
+	<!-- Forgot Page -->
+	         <action name="Forgot" class="mypack.MyAction">
+	        	<result type="tiles">/forgot.tiles</result>
+	        </action>
+	        <action name="Forget2" class="mypack.ForgetPassword">
+	        	<result type="tiles" name="error">/forgot.tiles</result>
+	        	<result type="tiles">/login.tiles</result>
+	        </action>
+	          
+	<!--Standard Page  -->    
+		<action name="stand" class="mypack.StandardAction"> 
+	            <result type="tiles">/stand.tiles</result>
+	  	</action>
+	<!--Interior Page  -->  
+	  	<action name="inter" class="mypack.InteriorAction">
+	  		<result type="tiles">/inter.tiles</result>
+	  	</action>
+	<!--Exterior Page  -->    	
+	  	<action name="exter" class="mypack.ExteriorAction">
+	  		<result type="tiles">/exter.tiles</result>
+	  	</action>
+	<!-- Accessories Page -->
+		<action name="access" class="mypack.AccessAction">
+	  		<result type="tiles">/access.tiles</result>
+	  	</action>
+	<!-- Invoice Page -->
+		<action name="invoice" class="mypack.InvoiceAction">
+	  		<result type="tiles">/invoice.tiles</result>
+	  	</action>
+	<!-- Games Page -->
+		<action name="games" class="mypack.MyAction">
+	  		<result type="tiles">/games.tiles</result>
+	  	</action>
+	  	
+	    </package> 
+	</struts>

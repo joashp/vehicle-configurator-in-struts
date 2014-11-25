@@ -1,0 +1,15 @@
+div.floating-menu 
+{
+	background:black;
+	border:1px solid #00abff;
+	height:420px;
+	width:175px;
+	z-index:100; 
+	top:250px; 
+	left:10px}
+	
+div.floating-menu a, div.floating-menu h3 {display:block;margin:0 0.5em;}
+a{color:aqua;}
+.foo{
+margin: 160px 30px 0px 30px; 
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.2//EN" "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+<validators>
+       <field name="user_Id">
+        	<field-validator type="requiredstring" short-circuit="true">
+        		<param name="trim"></param>
+            	<message>UserId can not be Blank</message>
+        	</field-validator>
+    </field> 
+    
+    <field name="name_Of_The_Company" >
+    	<field-validator type="requiredstring" short-circuit="true">
+    	<param name="trim"></param>
+    		<message>Company Name can not be blank</message>
+    	</field-validator>
+    </field>
+    
+    <field name="line1">
+    	<field-validator type="requiredstring" short-circuit="true">
+    		<param name="trim"></param>
+    		<message>Line1 can not be blank</message>
+    	</field-validator>
+    </field>
+    
+    <field name="line2">
+    	<field-validator type="requiredstring" short-circuit="true">
+    		<param name="trim"></param>
+    		<message>Line2 can not be blank</message>
+    	</field-validator>
+    </field>
+    
+    <field name="area_city_town">
+    	<field-validator type="requiredstring" short-circuit="true">
+    		<param name="trim"></param>
+    		<message>City Town can not be blank</message>
+    	</field-validator>
+    </field>
+    
+    <field name="state">
+    	<field-validator type="requiredstring" short-circuit="true">
+    		<param name="trim"></param>
+    		<message>State can not be blank</message>
+    	</field-validator>
+    	<field-validator type="expression" short-circuit="true">
+    		<param name="regex">^[a-zA-z]+$</param>
+    		<message>State should contain only Text</message>
+    	</field-validator>
+    </field>
+    
+    <field name="pincode">
+    	<field-validator type="requiredstring" short-circuit="true">
+    		<message>PinCode can not be blank</message>
+    	</field-validator>
+    	<field-validator type="regex" short-circuit="true">
+    		<param name="expression"><![CDATA[\d{6}]]></param>
+    		<message>Digit only Allowed only Six</message>
+    	</field-validator>
+    	 </field>
+    
+    <field name="telephone">
+    	<field-validator type="requiredstring" short-circuit="true">
+    		<message>Telephone can not be blank</message>
+    	</field-validator>
+    	<field-validator type="regex" short-circuit="true">
+    		<param name="expression"><![CDATA[\d{3}-\d{6}]]></param>
+    		<message>Enter Proper Format Telephone Number e.g 022-123456</message>
+    	</field-validator>
+    </field>
+    
+    <field name="cell">
+    	<field-validator type="requiredstring" short-circuit="true">
+    		<message>Cell number can not be blank</message>
+    	</field-validator>
+    	<field-validator type="regex" short-circuit="true">
+    		<param name="expression"><![CDATA[\d{10}]]></param>
+    		<message>Enter Valid Mobile Format</message>
+    	</field-validator>
+    </field>
+    
+    <field name="fax">
+    	<field-validator type="requiredstring" short-circuit="true">
+    		<message>fax can not be blank</message>
+    	</field-validator>
+    	<field-validator type="regex">
+    	<param name="expression"><![CDATA[\d{8}]]></param>
+    	<message>Enter Valid Fax Format e.g 12345678</message>
+    	</field-validator>
+    </field>
+    
+    <field name="name_Of_Authorized_Person">
+    	<field-validator type="requiredstring" short-circuit="true">
+    		<param name="trim"></param>
+    		<message>Person name can not be blank</message>
+    	</field-validator>
+    	<field-validator type="regex" short-circuit="true">
+    		<param name="expression">^[a-zA-z]+$</param>
+    		<message>Only Chracter is Allowed</message>
+    	</field-validator>
+    </field>
+    
+    <field name="company_ST_No">
+    	<field-validator type="requiredstring" short-circuit="true">
+    		<message>company_ST_No can not be blank</message>
+    	</field-validator>
+    	  </field>
+    
+    <field name="company_VAT_Reg_No">
+    	<field-validator type="requiredstring" short-circuit="true">
+    		<message>company_VAT_Reg_No can not be blank</message>
+    	</field-validator>
+    </field>
+    
+    <field name="i_Tax_Pan">
+    	<field-validator type="requiredstring" short-circuit="true">
+    		<message>i_Tax_Pan can not be blank</message>
+    	</field-validator>
+    </field>
+    
+    <field name="email_Id">
+    	<field-validator type="requiredstring" short-circuit="true">
+    		<message>Email-Id can not be blank</message>
+    	</field-validator>
+    	<field-validator type="email" short-circuit="true">
+    		<message>Invalid Email Format</message>
+    	</field-validator>
+    </field>
+        
+     <field name="password">
+        <field-validator type="requiredstring" short-circuit="true">
+        	<param name="trim"></param>
+            <message>Password can not be blank</message>
+        </field-validator>
+        <field-validator type="stringlength" short-circuit="true">
+		<param name="minLength">3</param>
+		<param name="maxLength">8</param>
+		<message>Password length must be within ${minLength} and ${maxLength}</message>
+	</field-validator>
+    </field>
+    
+    <field name="repassword">
+        <field-validator type="requiredstring" short-circuit="true">
+        	<param name="trim"></param>
+            <message>Re-password can not be blank</message>
+        </field-validator>
+        <field-validator type="stringlength" short-circuit="true">
+		<param name="minLength">3</param>
+		<param name="maxLength">8</param>
+		<message> Password length must be within ${minLength} and ${maxLength}</message>
+	</field-validator>
+    </field>
+</validators>

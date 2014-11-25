@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+
+	<definition name="baseLayout" template="/baselayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/header.jsp" />
+		<put-attribute name="leftpane" value="/leftpane.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/footer.jsp" />
+	</definition>
+<!-- Home page -->
+	<definition name="/home.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Home" />
+		<put-attribute name="body" value="/home.jsp" />
+	</definition>
+<!-- Sign In -->
+	<definition name="/login.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Log In" />
+		<put-attribute name="body" value="/Login.jsp" />
+	</definition>
+<!-- Selection Page -->
+	<definition name="/select.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Selection" />
+		<put-attribute name="body" value="/select.jsp" />
+	</definition>
+<!-- Registration Page -->
+	<definition name="/reg.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Registration" />
+		<put-attribute name="body" value="/Registration.jsp" />
+	</definition>
+<!-- Feedback Page -->
+	<definition name="/feed.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Feedback" />
+		<put-attribute name="body" value="/FeedBackPage.jsp" />
+	</definition>	
+<!-- About Page -->
+	<definition name="/about.tiles" extends="baseLayout">
+		<put-attribute name="title" value="About Us" />
+		<put-attribute name="body" value="/AboutUsPage.jsp" />
+	</definition>	
+<!-- Contact Page -->
+	<definition name="/contact.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Contact Us" />
+		<put-attribute name="body" value="/ContactUs.jsp" />
+	</definition>		
+<!-- DefaultConfig Page -->
+	<definition name="/default.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Default" />
+		<put-attribute name="body" value="/DefaultConfiguration.jsp" />
+	</definition>	
+<!-- ForgotPassword Page -->
+	<definition name="/forgot.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Forgot Password" />
+		<put-attribute name="body" value="/ForgetPassword.jsp" />
+	</definition>	
+	
+<!-- Standard Page -->
+  	<definition name="/stand.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Standard" />
+		<put-attribute name="body" value="/Standard.jsp" />
+	</definition>	
+<!-- Interior Page -->
+	<definition name="/inter.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Interior" />
+		<put-attribute name="body" value="/Interior.jsp" />
+	</definition>
+<!-- Exterior Page -->
+	<definition name="/exter.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Exterior" />
+		<put-attribute name="body" value="/Exterior.jsp" />
+	</definition>
+<!-- Invoice Page -->
+	<definition name="/invoice.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Invoice" />
+		<put-attribute name="body" value="/Invoice.jsp" />
+	</definition>
+<!-- Accesories Page -->
+	<definition name="/access.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Accessories" />
+		<put-attribute name="body" value="/Accessories.jsp" />
+	</definition>	
+<!-- Games Page -->
+	<definition name="/games.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Games" />
+		<put-attribute name="body" value="/games.jsp" />
+	</definition>	
+	
+	<definition name="/customer.success.tiles" extends="baseLayout">
+		<put-attribute name="title" value="Customer Added" />
+		<put-attribute name="body" value="/SuccessCustomer.jsp" />
+	</definition>
+
+</tiles-definitions>
